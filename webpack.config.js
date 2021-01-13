@@ -42,7 +42,9 @@ module.exports = {
                 ["@babel/react", { runtime: "automatic" }],
                 "@babel/typescript",
               ],
-              plugins: [isDev && "react-refresh/babel"].filter(Boolean),
+              plugins: ["graphql-tag", isDev && "react-refresh/babel"].filter(
+                Boolean
+              ),
             },
           },
         ],
