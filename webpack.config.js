@@ -5,6 +5,7 @@ const TerserWebpackPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const DotenvWebpackPlugin = require("dotenv-webpack");
 
 const isDev = process.env.NODE_ENV !== "production";
 
@@ -104,6 +105,7 @@ module.exports = {
   plugins: [
     isDev && new ReactRefreshWebpackPlugin(),
     new CleanWebpackPlugin(),
+    new DotenvWebpackPlugin(),
 
     new MiniCssExtractPlugin({
       filename: "style.[contenthash].css",
