@@ -3,9 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const DotenvWebpackPlugin = require("dotenv-webpack");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const isDev = process.env.NODE_ENV !== "production";
 
@@ -21,6 +22,7 @@ module.exports = {
   devtool: "source-map",
 
   resolve: {
+    plugins: [new TsconfigPathsPlugin()],
     extensions: [".js", ".ts", ".tsx"],
   },
 
