@@ -138,7 +138,9 @@ module.exports = {
   devServer: {
     compress: true,
     historyApiFallback: true,
+    host: "0.0.0.0",
     hot: true,
+    https: process.env.HTTPS === "true",
     inline: true,
     overlay: { warnings: true, errors: true },
     port: 3000,
