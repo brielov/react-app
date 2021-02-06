@@ -2,6 +2,11 @@
 
 This is my own `create-react-app`. The reason I made this repo is because `create-react-app` has missing features I need.
 
+### Install
+```bash
+npx degit brielov/react-app my-app
+```
+
 ### Features
 
 - Similar folder structure as `create-react-app`
