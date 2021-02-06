@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const DotenvWebpackPlugin = require("dotenv-webpack");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -33,21 +32,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                "@babel/env",
-                ["@babel/react", { runtime: "automatic" }],
-                "@babel/typescript",
-              ],
-              plugins: ["graphql-tag", isDev && "react-refresh/babel"].filter(
-                Boolean
-              ),
-            },
-          },
-        ],
+        use: ["swc-loader"],
         exclude: /node_modules/,
       },
 
@@ -107,7 +92,6 @@ module.exports = {
    * Plugins
    */
   plugins: [
-    isDev && new ReactRefreshWebpackPlugin(),
     new CleanWebpackPlugin(),
     new DotenvWebpackPlugin(),
 
