@@ -86,7 +86,8 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "lint-staged"
+      "precommit": "lint-staged",
+      "prepush": "jest"
     }
   }
 }
