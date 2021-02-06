@@ -83,11 +83,5 @@
       "prettier --write",
       "jest --bail --findRelatedTests"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "precommit": "lint-staged",
-      "prepush": "jest"
-    }
   }
 }
