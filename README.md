@@ -16,5 +16,8 @@ This is my own `create-react-app`. The reason I made this repo is because `creat
 
 ### Missing features
 
-- Fast refresh (waiting to SWC)
-- JSX factories (waiting to SWC)
+- Fast refresh ([#588][588])
+- JSX factories ([#1250][1250])
+
+[588]: https://github.com/swc-project/swc/issues/588
+[1250]: https://github.com/swc-project/swc/issues/1250
