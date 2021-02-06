@@ -18,7 +18,7 @@ module.exports = {
   },
 
   mode: isDev ? "development" : "production",
-  devtool: "source-map",
+  devtool: isDev ? "cheap-module-source-map" : false,
 
   resolve: {
     plugins: [new TsconfigPathsPlugin()],
