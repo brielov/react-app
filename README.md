@@ -1,6 +1,6 @@
 # react-app
 
-This is my own `create-react-app`. The reason I made this repo is because `create-react-app` has missing features that I need.
+This is my own `create-react-app`. The reason I made this repo is because `create-react-app` has missing features I need.
 
 ### Features
 
