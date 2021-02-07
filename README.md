@@ -3,6 +3,7 @@
 This is my own `create-react-app`. The reason I made this repo is because `create-react-app` has missing features I need.
 
 ### Install
+
 ```bash
 npx degit brielov/react-app my-app
 ```
@@ -17,6 +18,7 @@ npx degit brielov/react-app my-app
 - Webpack 5
 - SWC instead of Babel (very fast)
 - Jest
+- SPA (with service worker)
 - Husky hooks for ESLint, Prettier and Jest
 
 ### Missing features

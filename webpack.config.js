@@ -6,8 +6,11 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const DotenvWebpackPlugin = require("dotenv-webpack");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
-const isDev = process.env.NODE_ENV !== "production";
+const isProd = process.env.NODE_ENV === "production";
+const isDev = !isProd;
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.tsx"),
@@ -95,6 +98,18 @@ module.exports = {
     new CleanWebpackPlugin(),
     new DotenvWebpackPlugin(),
 
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "public",
+          to: ".",
+          globOptions: {
+            ignore: ["**/index.html"],
+          },
+        },
+      ],
+    }),
+
     new MiniCssExtractPlugin({
       filename: "style.[contenthash].css",
       chunkFilename: "[id].css",
@@ -105,6 +120,16 @@ module.exports = {
       publicPath: "/",
       template: path.resolve(__dirname, "public", "index.html"),
     }),
+
+    isProd &&
+      new WorkboxPlugin.GenerateSW({
+        clientsClaim: true,
+        skipWaiting: true,
+        // In thevelopment, we set this to 5MB to account for un-purged tailwindcss styles
+        maximumFileSizeToCacheInBytes: isDev
+          ? 5 * 1024 * 1024
+          : 2 * 1024 * 1024,
+      }),
   ].filter(Boolean),
 
   /**
