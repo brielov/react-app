@@ -11,9 +11,9 @@ npx degit brielov/react-app my-app
 ### Features
 
 - Similar folder structure as `create-react-app`
-- TypeScript 4.1
+- TypeScript 4.2
 - PostCSS 8
-- TailwindCSS 2
+- TailwindCSS 2 (with JIT compiler, very fast)
 - CSS Modules
 - Webpack 5
 - SWC instead of Babel (very fast)
