@@ -1,4 +1,5 @@
 const path = require("path");
+const zlib = require("zlib");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
@@ -8,6 +9,7 @@ const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 const isDev = !isProd;
@@ -16,7 +18,7 @@ module.exports = {
   entry: path.resolve(__dirname, "src", "index.tsx"),
 
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "build"),
   },
 
@@ -97,6 +99,26 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new DotenvWebpackPlugin(),
+
+    new CompressionPlugin({
+      filename: "[path][base].gz",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+    new CompressionPlugin({
+      filename: "[path][base].br",
+      algorithm: "brotliCompress",
+      test: /\.(js|css|html|svg)$/,
+      compressionOptions: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 11,
+        },
+      },
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
 
     new CopyPlugin({
       patterns: [
