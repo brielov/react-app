@@ -104,7 +104,7 @@ module.exports = {
       new CompressionPlugin({
         filename: "[path][base].gz",
         algorithm: "gzip",
-        test: /\.js$|\.css$|\.html$/,
+        test: /\.(js|css|html)$/,
         threshold: 10240,
         minRatio: 0.8,
       }),
@@ -162,7 +162,17 @@ module.exports = {
    */
   optimization: {
     minimizer: !isDev
-      ? [new TerserWebpackPlugin(), new CssMinimizerPlugin()]
+      ? [
+          new TerserWebpackPlugin({
+            terserOptions: {
+              format: {
+                comments: false,
+              },
+            },
+            extractComments: false,
+          }),
+          new CssMinimizerPlugin(),
+        ]
       : [],
   },
 
