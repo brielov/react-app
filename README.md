@@ -6,6 +6,9 @@ This is my own `create-react-app`. The reason I made this repo is because `creat
 
 ```bash
 npx degit brielov/react-app my-app
+cd my-app
+yarn install
+yarn dev
 ```
 
 ### Features
