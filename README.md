@@ -14,7 +14,7 @@ npx degit brielov/react-app my-app
 - TypeScript 4.2
 - JSX Factories
 - PostCSS 8
-- TailwindCSS 2 (with JIT compiler, very fast)
+- TailwindCSS 2.1
 - CSS Modules
 - Webpack 5
 - SWC instead of Babel (very fast)
