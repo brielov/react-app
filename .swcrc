@@ -5,6 +5,11 @@
       "tsx": true,
       "dynamicImport": true
     },
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    },
     "target": "es2020",
     "loose": true,
     "externalHelpers": true

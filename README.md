@@ -12,6 +12,7 @@ npx degit brielov/react-app my-app
 
 - Similar folder structure as `create-react-app`
 - TypeScript 4.2
+- JSX Factories
 - PostCSS 8
 - TailwindCSS 2 (with JIT compiler, very fast)
 - CSS Modules
@@ -24,7 +25,5 @@ npx degit brielov/react-app my-app
 ### Missing features
 
 - Fast refresh ([#588][588])
-- JSX factories ([#1250][1250])
 
 [588]: https://github.com/swc-project/swc/issues/588
-[1250]: https://github.com/swc-project/swc/issues/1250

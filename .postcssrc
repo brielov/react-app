@@ -1,6 +1,6 @@
 {
   "plugins": {
-    "@tailwindcss/jit": {},
+    "tailwindcss": {},
     "postcss-nested": {},
     "autoprefixer": {}
   }

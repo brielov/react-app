@@ -4,7 +4,7 @@
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "sourceMap": true,
     "rootDir": "./src",
     "strict": true,
