@@ -5,10 +5,10 @@ This is my own `create-react-app`. The reason I made this repo is because `creat
 ### Install
 
 ```bash
-npx degit brielov/react-app my-app
+pnpx degit brielov/react-app my-app
 cd my-app
-yarn install
-yarn dev
+pnpm install
+pnpm run dev
 ```
 
 ### Features
