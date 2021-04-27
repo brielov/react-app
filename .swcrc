@@ -1,5 +1,8 @@
 {
   "jsc": {
+    "target": "es2020",
+    "loose": true,
+    "externalHelpers": true,
     "parser": {
       "syntax": "typescript",
       "tsx": true,
@@ -8,10 +11,12 @@
     "transform": {
       "react": {
         "runtime": "automatic"
+      },
+      "optimizer": {
+        "jsonify": {
+          "minCost": 1024
+        }
       }
-    },
-    "target": "es2020",
-    "loose": true,
-    "externalHelpers": true
+    }
   }
 }

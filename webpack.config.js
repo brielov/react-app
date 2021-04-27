@@ -150,7 +150,8 @@ module.exports = {
       new WorkboxPlugin.GenerateSW({
         clientsClaim: true,
         skipWaiting: true,
-        // In thevelopment, we set this to 5MB to account for un-purged tailwindcss styles
+        // In thevelopment, we set this to 5MB to account for un-purged tailwindcss styles.
+        // Side note: This is no longer relevant since tailwind now supports JIT compilation.
         maximumFileSizeToCacheInBytes: isDev
           ? 5 * 1024 * 1024
           : 2 * 1024 * 1024,
