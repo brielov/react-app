@@ -1,14 +1,14 @@
 # react-app
 
-This is my own `create-react-app`. The reason I made this repo is because `create-react-app` has missing features I need.
+This is my own `create-react-app` starter kit thing. The reason I made this is because `CRA` can be somewhat opinionated when it comes to customizing basic things like adding `tailwindcss` with `postcss` or simply tweaking your `webpack` config. This repo comes with everything I personally use on every new `SPA` project. Also, I feel that `CRA` is slow as f\*\*k.
 
 ### Install
 
 ```bash
-pnpx degit brielov/react-app my-app
+npx degit brielov/react-app my-app
 cd my-app
-pnpm install
-pnpm run dev
+npm install
+npm run dev
 ```
 
 ### Features
@@ -22,11 +22,13 @@ pnpm run dev
 - Webpack 5
 - SWC instead of Babel (very fast)
 - Jest
-- SPA (with service worker)
-- Husky hooks for ESLint, Prettier and Jest
+- ESLint
+- Prettier
+- SPA ready (with customizable service worker)
+- Husky hooks
 
 ### Missing features
 
-- Fast refresh ([#588][588])
+- Fast refresh (waiting on `swc` [#588][588])
 
 [588]: https://github.com/swc-project/swc/issues/588
