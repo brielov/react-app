@@ -51,7 +51,7 @@
     "postcss": "^8.2.14",
     "postcss-loader": "^5.2.0",
     "postcss-nested": "^5.0.5",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "swc-loader": "^0.1.13",
     "tailwindcss": "^2.1.2",
     "terser-webpack-plugin": "^5.1.1",
