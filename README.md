@@ -16,6 +16,7 @@ npm run dev
 - Similar folder structure as `create-react-app`
 - TypeScript 4.2
 - JSX Factories
+- Fast Refresh
 - PostCSS 8
 - TailwindCSS 2.1
 - CSS Modules
@@ -26,9 +27,3 @@ npm run dev
 - Prettier
 - SPA ready (with customizable service worker)
 - Husky hooks
-
-### Missing features
-
-- Fast refresh (waiting on `swc` [#588][588])
-
-[588]: https://github.com/swc-project/swc/issues/588

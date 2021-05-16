@@ -10,7 +10,8 @@
     },
     "transform": {
       "react": {
-        "runtime": "automatic"
+        "runtime": "automatic",
+        "refresh": true
       },
       "optimizer": {
         "jsonify": {
