@@ -10,6 +10,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 const isDev = !isProd;
@@ -97,6 +98,8 @@ module.exports = {
    * Plugins
    */
   plugins: [
+    isDev && new ReactRefreshWebpackPlugin(),
+
     new CleanWebpackPlugin(),
     new DotenvWebpackPlugin(),
 
