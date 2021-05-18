@@ -11,6 +11,7 @@ const WorkboxPlugin = require("workbox-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 const isDev = !isProd;
@@ -125,6 +126,8 @@ module.exports = {
         threshold: 10240,
         minRatio: 0.8,
       }),
+
+    new NodePolyfillPlugin(),
 
     new CopyPlugin({
       patterns: [
