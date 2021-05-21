@@ -18,7 +18,7 @@
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "@svgr/webpack": "^5.5.0",
-    "@swc/core": "^1.2.57",
+    "@swc/core": "^1.2.58",
     "@swc/helpers": "^0.2.11",
     "@swc/jest": "^0.1.2",
     "@testing-library/jest-dom": "^5.12.0",
