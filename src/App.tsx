@@ -1,3 +1,3 @@
-export default function App(): JSX.Element {
-  return <div>React App</div>;
-}
+const App: React.FC = () => <>React App</>;
+
+export default App;
