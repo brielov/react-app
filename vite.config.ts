@@ -1,10 +1,16 @@
+/// <reference types="vitest" />
+
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [reactRefresh()],
   esbuild: {
     jsxInject: `import React from 'react'`,
+  },
+  test: {
+    environment: "jsdom",
+    global: true,
+    watch: false,
   },
 });
