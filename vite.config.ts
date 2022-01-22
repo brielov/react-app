@@ -9,6 +9,9 @@ export default defineConfig({
   esbuild: {
     jsxInject: `import React from 'react'`,
   },
+  build: {
+    target: "es2020",
+  },
   resolve: {
     alias: {
       src: join(__dirname, "src"),
