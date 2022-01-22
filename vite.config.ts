@@ -9,9 +9,8 @@ export default defineConfig({
     jsxInject: `import React from 'react'`,
   },
   test: {
-    global: true,
     environment: "jsdom",
-    setupFiles: ["src/setupTests.ts"],
+    global: true,
     watch: false,
   },
 });
