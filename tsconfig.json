@@ -14,7 +14,8 @@
     "skipLibCheck": false,
     "strict": true,
     "target": "esnext",
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "baseUrl": "."
   },
   "include": ["src/**/*"]
 }

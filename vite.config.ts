@@ -2,11 +2,17 @@
 
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import { defineConfig } from "vite";
+import { join } from "path";
 
 export default defineConfig({
   plugins: [reactRefresh()],
   esbuild: {
     jsxInject: `import React from 'react'`,
+  },
+  resolve: {
+    alias: {
+      src: join(__dirname, "src"),
+    },
   },
   test: {
     environment: "jsdom",
