@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -14,8 +15,7 @@
     "skipLibCheck": false,
     "strict": true,
     "target": "esnext",
-    "types": ["vitest/globals"],
-    "baseUrl": "."
+    "types": ["vitest/globals"]
   },
   "include": ["src/**/*"]
 }
