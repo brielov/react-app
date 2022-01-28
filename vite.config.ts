@@ -1,11 +1,11 @@
 /// <reference types="vitest" />
 
-import reactRefresh from "@vitejs/plugin-react-refresh";
+import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [reactRefresh(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths()],
   esbuild: {
     jsxInject: `import React from 'react'`,
   },
