@@ -6,9 +6,6 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
-  esbuild: {
-    jsxInject: `import React from 'react'`,
-  },
   build: {
     target: "es2020",
   },
