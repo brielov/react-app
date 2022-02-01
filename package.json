@@ -32,7 +32,7 @@
     "is-ci": "^3.0.1",
     "jsdom": "^19.0.0",
     "lint-staged": "^12.3.1",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "postcss-nesting": "^10.1.2",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",
