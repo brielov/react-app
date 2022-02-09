@@ -1,0 +1,6 @@
+{
+  "display": "standalone",
+  "name": "Create React App Sample",
+  "short_name": "React App",
+  "start_url": "."
+}
