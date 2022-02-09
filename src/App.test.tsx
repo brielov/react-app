@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders `React App` to the screen", () => {
   render(<App />);
-  const divElement = screen.getByText("React App");
-  expect(divElement).toBeInTheDocument();
+  const element = screen.getByText("React App");
+  expect(element).toBeInTheDocument();
 });
