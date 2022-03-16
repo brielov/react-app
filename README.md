@@ -6,12 +6,12 @@ This is a simple React app template powered by [vite](https://vitejs.dev).
 
 - [x] [Vite](https://vitejs.dev) as the bundler.
 - [x] [Vitest](https://vitest.dev) as the test runner.
-- [x] [React](https://reactjs.org) as the ui library.
+- [x] [React 18](https://reactjs.org) as the UI library.
 - [x] [TypeScript](https://www.typescriptlang.org) as the language.
-- [x] [PostCSS](https://postcss.org) for CSS preprocessing.
-- [x] [TailwindCSS](https://tailwindcss.com) as a CSS framework.
-- [x] [ESLint](https://eslint.org) as a linter.
-- [x] [Prettier](https://prettier.io) as a formatter.
+- [x] [PostCSS](https://postcss.org) as the CSS preprocessor.
+- [x] [TailwindCSS](https://tailwindcss.com) as the CSS framework.
+- [x] [ESLint](https://eslint.org) as the linter.
+- [x] [Prettier](https://prettier.io) as the formatter.
 - [x] [Husky](https://typicode.github.io/husky) as the git hooks manager.
 - [x] [Git](https://git-scm.com) as the source control manager.
 - [x] [GitHub Actions](https://github.com/features/actions) as the CI/CD manager.
