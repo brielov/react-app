@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -15,7 +14,10 @@
     "skipLibCheck": false,
     "strict": true,
     "target": "ESNext",
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "references": [
