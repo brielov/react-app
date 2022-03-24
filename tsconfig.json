@@ -17,7 +17,8 @@
     "useDefineForClassFields": true,
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
+    "types": ["vitest/importMeta"]
   },
   "include": ["src"],
   "references": [
