@@ -35,8 +35,3 @@ import { Button } from "~/components/Button";
 // Instead of this
 import { Button } from '../../components/Button';
 ```
-
-## Prettier
-
-This project comes with [this prettier plugin](https://github.com/trivago/prettier-plugin-sort-imports) which sorts all your imports.
-So if you're using vscode and you have some kind of a plugin that sorts the imports, you should disable it or uninstall the prettier plugin.
