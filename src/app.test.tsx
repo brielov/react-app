@@ -23,3 +23,18 @@ test("renders a button that decrements the count", () => {
   act(() => decrement.click());
   expect(screen.getByTestId("count")).toHaveTextContent("-1");
 });
+
+test("renders a button that resets the count", () => {
+  render(<App />);
+  const increment = screen.getByTestId("increment");
+  const reset = screen.getByTestId("reset");
+  expect(reset).toBeInTheDocument();
+  act(() => {
+    increment.click();
+    increment.click();
+    increment.click();
+  });
+  expect(screen.getByTestId("count")).toHaveTextContent("3");
+  act(() => reset.click());
+  expect(screen.getByTestId("count")).toHaveTextContent("0");
+});

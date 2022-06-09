@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "build": "vite build",
-    "build:stories": "ladle build --out dist-stories",
-    "coverage": "vitest run --coverage",
+    "coverage": "vitest --coverage",
     "dev": "vite",
-    "dev:stories": "ladle serve",
     "lint": "eslint src",
     "prepare": "is-ci || husky install",
     "prettier": "prettier -w src",
     "serve": "vite preview",
+    "story:build": "ladle build --out dist-stories",
+    "story:dev": "ladle serve",
     "test": "vitest"
   },
   "dependencies": {
@@ -18,6 +18,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@ladle/react": "^0.16.0",
     "@tailwindcss/forms": "^0.5.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -29,6 +30,7 @@
     "@typescript-eslint/parser": "^5.27.1",
     "@vitejs/plugin-react": "^1.3.2",
     "autoprefixer": "^10.4.7",
+    "c8": "^7.11.3",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
