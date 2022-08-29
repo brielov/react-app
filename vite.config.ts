@@ -17,6 +17,5 @@ export default defineConfig({
     globals: true,
     includeSource: ["src/**/*.{js,ts}"],
     setupFiles: ["src/setup-tests.ts"],
-    watch: false,
   },
 });

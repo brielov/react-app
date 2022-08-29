@@ -30,8 +30,8 @@ This project follows the remix-imports style.
 
 ```ts
 // You can do this
-import { Button } from "~/components/Button";
+import { Button } from "~/components/button";
 
 // Instead of this
-import { Button } from '../../components/Button';
+import { Button } from "../../components/button";
 ```
