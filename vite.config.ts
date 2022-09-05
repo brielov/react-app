@@ -36,4 +36,7 @@ export default defineConfig({
       lines: MIN_COVERAGE,
     },
   },
+  server: {
+    port: 3000,
+  },
 });
