@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "build": "vite build",
-    "coverage": "vitest --coverage",
     "dev": "vite",
     "lint": "eslint src",
     "prepare": "is-ci || husky install",
@@ -12,7 +11,8 @@
     "story:build": "ladle build --out dist-stories",
     "story:dev": "ladle serve",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui --watch"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -30,9 +30,9 @@
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/coverage-c8": "^0.23.1",
     "@vitest/ui": "^0.23.1",
     "autoprefixer": "^10.4.8",
-    "c8": "^7.11.3",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",

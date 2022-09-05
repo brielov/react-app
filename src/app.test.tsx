@@ -1,4 +1,4 @@
-import { act, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import App from "./app";
 
@@ -12,7 +12,7 @@ test("renders a button that increments the count", () => {
   render(<App />);
   const increment = screen.getByTestId("increment");
   expect(increment).toBeInTheDocument();
-  act(() => increment.click());
+  fireEvent.click(increment);
   expect(screen.getByTestId("count")).toHaveTextContent("1");
 });
 
@@ -20,7 +20,7 @@ test("renders a button that decrements the count", () => {
   render(<App />);
   const decrement = screen.getByTestId("decrement");
   expect(decrement).toBeInTheDocument();
-  act(() => decrement.click());
+  fireEvent.click(decrement);
   expect(screen.getByTestId("count")).toHaveTextContent("-1");
 });
 
@@ -29,12 +29,8 @@ test("renders a button that resets the count", () => {
   const increment = screen.getByTestId("increment");
   const reset = screen.getByTestId("reset");
   expect(reset).toBeInTheDocument();
-  act(() => {
-    increment.click();
-    increment.click();
-    increment.click();
-  });
+  Array.from({ length: 3 }, () => fireEvent.click(increment));
   expect(screen.getByTestId("count")).toHaveTextContent("3");
-  act(() => reset.click());
+  fireEvent.click(reset);
   expect(screen.getByTestId("count")).toHaveTextContent("0");
 });
