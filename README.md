@@ -35,3 +35,22 @@ import { Button } from "~/components/button";
 // Instead of this
 import { Button } from "../../components/button";
 ```
+
+## Debugging with Visual Studio Code
+
+Create a new file under `.vscode/launch.json` and paste the following code to get you started. This will enable you to add break points and debug your application step by step.
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
+```

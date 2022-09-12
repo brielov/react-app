@@ -8,14 +8,18 @@
     "prepare": "is-ci || husky install",
     "prettier": "prettier -w src",
     "serve": "vite preview",
+    "story:build": "ladle build --out dist-stories",
+    "story:dev": "ladle serve",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui --watch"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@ladle/react": "^0.16.0",
     "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -26,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/coverage-c8": "^0.23.1",
     "@vitest/ui": "^0.23.1",
     "autoprefixer": "^10.4.8",
     "eslint": "^8.23.0",
