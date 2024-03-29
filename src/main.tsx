@@ -5,9 +5,12 @@ import "./main.css";
 
 const rootNode = document.getElementById("root");
 
-rootNode &&
-  createRoot(rootNode).render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
+if (!rootNode) {
+  throw new Error("Root node not found");
+}
+
+createRoot(rootNode).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
