@@ -1,5 +1,9 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+  "vcs": {
+    "defaultBranch": "main",
+    "useIgnoreFile": true
+  },
   "organizeImports": {
     "enabled": false
   },
@@ -12,6 +16,11 @@
     "enabled": true,
     "rules": {
       "recommended": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "trailingComma": "all"
     }
   }
 }

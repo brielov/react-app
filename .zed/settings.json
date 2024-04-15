@@ -1,0 +1,36 @@
+{
+  "language_overrides": {
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/.bin/biome",
+          "arguments": ["format", "--write", "--stdin-file-path={buffer_path}"]
+        }
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/.bin/biome",
+          "arguments": ["format", "--write", "--stdin-file-path={buffer_path}"]
+        }
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/.bin/biome",
+          "arguments": ["format", "--write", "--stdin-file-path={buffer_path}"]
+        }
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/.bin/biome",
+          "arguments": ["format", "--write", "--stdin-file-path={buffer_path}"]
+        }
+      }
+    }
+  }
+}
