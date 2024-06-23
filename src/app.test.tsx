@@ -1,5 +1,5 @@
-import { render } from "./test-utils.tsx";
 import App from "./app.tsx";
+import { render } from "./test-utils.tsx";
 
 describe("<App />", () => {
   it("should render", () => {
